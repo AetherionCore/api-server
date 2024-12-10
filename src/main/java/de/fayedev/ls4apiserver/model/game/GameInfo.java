@@ -22,6 +22,8 @@ public class GameInfo {
     private boolean minionSpawnsEnabled;
     @JsonProperty("CONTENT_PATH")
     private String contentPath; // Path to game content folder. ../../../../../Content (Windows)  ../../../../Content (Linux) by default.
+    @JsonProperty("scriptAssemblies")
+    private String[] scriptAssemblies;
     @JsonProperty("IS_DAMAGE_TEXT_GLOBAL")
     private boolean isDamageTextGlobal;
 }

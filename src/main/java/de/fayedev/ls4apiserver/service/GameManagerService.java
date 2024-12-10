@@ -197,6 +197,7 @@ public class GameManagerService {
         gameInfo.setMinionSpawnsEnabled(true);
         gameInfo.setContentPath(contentPath);
         gameInfo.setDamageTextGlobal(false);
+        gameInfo.setScriptAssemblies(new String[]{"LeagueSandbox-Scripts"});
 
         for (var i = 0; i < gameLobby.getAllUsers().size(); i++) {
             var lobbyUser = gameLobby.getAllUsers().get(i);
@@ -239,7 +240,7 @@ public class GameManagerService {
             }
 
             try (Stream<Path> s = Files.walk(path, 1)) {
-                List<Path> paths = s.filter(c -> c.toFile().isDirectory() && c.toFile().getName().equals("Content")).collect(Collectors.toList());
+                List<Path> paths = s.filter(c -> c.toFile().isDirectory() && c.toFile().getName().equals("Content")).toList();
 
                 if (paths.size() == 1) {
                     result = paths.get(0).toString();
