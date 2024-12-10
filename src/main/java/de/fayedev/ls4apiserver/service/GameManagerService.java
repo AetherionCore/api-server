@@ -193,7 +193,7 @@ public class GameManagerService {
 
         gameInfo.setManaCostsEnabled(true);
         gameInfo.setCooldownsEnabled(true);
-        gameInfo.setCheatsEnabled(false);
+        gameInfo.setCheatsEnabled(true);
         gameInfo.setMinionSpawnsEnabled(true);
         gameInfo.setContentPath(contentPath);
         gameInfo.setDamageTextGlobal(false);
